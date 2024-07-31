@@ -21,7 +21,27 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-
+day=input("which weekday do you want search:all, monday, tuesday, wednesday, thursday, friday, saturday, sunday ?\n").lower()
+    while day!='all':
+        if day=='monday':
+            break
+        if day=='tuesday':
+            break
+        if day=='wednesday':
+            break
+        if day=='thrusday':
+            break
+        if day=='friday':
+            break
+        if day=='saturday':
+            break
+        if day=='sunday':
+            break
+        print("Wrong inputy, please try again: all, monday, tuesday, wednesday, thursday, friday, saturday, sunday")
+        day=input("which weekday do you want search:all, monday, tuesday, wednesday, thursday, friday, saturday, sunday ?\n").lower()
+        
+    print('-'*40)
+    return city, month, day
 
     print('-'*40)
     return city, month, day
