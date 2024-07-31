@@ -43,8 +43,7 @@ day=input("which weekday do you want search:all, monday, tuesday, wednesday, thu
     print('-'*40)
     return city, month, day
 
-    print('-'*40)
-    return city, month, day
+   
 
 
 def load_data(city, month, day):
@@ -58,9 +57,30 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+def load_data(city, month, day):
+    """
+    Loads data for the specified city and filters by month and day if applicable.
 
-
+    Args:
+        (str) city - name of the city to analyze
+        (str) month - name of the month to filter by, or "all" to apply no month filter
+        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+    Returns:
+        df - Pandas DataFrame containing city data filtered by month and day
+    """
+    df=pd.read_csv(CITY_DATA[city])
+    df['Start Time']=pd.to_datetime(df['Start Time'])
+    df['month']=df['Start Time'].dt.month
+    df['day']=df['Start Time'].dt.weekday_name
+    if month !='all':
+       months=["january","february","march","april","may","june"]
+       month=months.index(month)+1
+       df=df[df['month']==month]
+    if day !='all':
+       df=df[df['day']==day.title()]
     return df
+
+
 
 
 def time_stats(df):
