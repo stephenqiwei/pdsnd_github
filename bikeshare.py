@@ -26,7 +26,7 @@ def get_filters():
            break
         print("Wrong input,please try again: chicago, new york city or washington")
         city=input("which city do you want search:chicago, new york city or washington?\n").lower()
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # TO DO: get user input for month (all, january, february, ... , june).
     month=input("which month do you want search:all, january, february, march, april, may, june ?\n").lower()
     while month!='all':
         if month=='january':
