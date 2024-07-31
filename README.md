@@ -12,7 +12,7 @@ Replace the Project Title.
 Describe what your project is about and what it does
 
 ### Files used in Udacity class
-Files used in Udacity class
+Files used in Udacity class.
 Include the files used
 
 ### Credits
